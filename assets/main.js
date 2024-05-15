@@ -519,10 +519,10 @@ function showPlayer(num, id) {
             });
     } else if (num == 8) {
         document.getElementById('Content-img').innerHTML = '<iframe class="iframe" src="https://udidios.github.io/udid/kinobd#' + id + '" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>';
-    } else if (num == 9) {
-        document.getElementById('Content-img').innerHTML = '<iframe class="iframe" src="https://udidios.github.io/udid/?q=' + id + '" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>';
     } else if (num == 10) {
-        fetch('https://kinobox.tv/api/players/main?kinopoisk=' + id)
+        document.getElementById('Content-img').innerHTML = '<iframe class="iframe" src="https://udidios.github.io/udid/?q=' + id + '" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>';
+    } else if (num == 9) {
+        fetch('https://kinobox.tv/api/players/?kinopoisk=' + id)
             .then(res => res.json())
             .then(function (obj) {
                 document.getElementById('Content-img').innerHTML = '<iframe class="iframe" src="' + obj['results'][0]['link'] + '" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>';
