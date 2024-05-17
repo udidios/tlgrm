@@ -1,6 +1,6 @@
 <html>
 <script>
-const id = new URLSearchParams(window.location.search).get('kp_id');; // замените на ваш идентификатор
+const id = new URLSearchParams(window.location.search).get('kp_id'); // замените на ваш идентификатор
 const url = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
 
 // отправляем запрос с помощью fetch API
@@ -10,41 +10,17 @@ fetch(url)
     if(data[0] && data[0].iframeUrl) {
       document.body.innerHTML = `<iframe class="iframe" src="${data[0].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[1] && data[1].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[1].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[2] && data[2].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[2].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[3] && data[3].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[3].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[4] && data[4].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[4].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[5] && data[5].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[5].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else if(data[6] && data[6].iframeUrl) {
-      document.body.innerHTML =l = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
-
-// отправляем запрос с помощью fetch API
-fetch(url)
-  .then(respo
+      document.body.innerHTML = `<iframe class="iframe" src="${data[6].iframeUrl}" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="" seamless></iframe>`;
     } else {
       console.error('Ошибка: фильм или сериал не найден.');
     }
