@@ -25,9 +25,9 @@ const id = new URLSearchParams(window.location.search).get('id');
 let url;
 
 if (id.startsWith('tt')) {
-  url = 'https://kinobox.tv/api/players/?imdb=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
+  url = 'https://kinobox.tv/api/players/?imdb=' + id + '&sources=Collaps,Alloha,Hdvb,Videocdn,Voidboost,Kodik';
 } else {
-  url = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
+  url = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Collaps,Alloha,Hdvb,Videocdn,Voidboost,Kodik';
 }
 
 // отправляем запрос с помощью fetch API
