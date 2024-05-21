@@ -22,15 +22,13 @@
 <script>
 
 const id = new URLSearchParams(window.location.search).get('id');
-let kp_id, imdb_id;
 
 if (id.startsWith('tt')) {
-  imdb_id = id;
+  const url = 'https://kinobox.tv/api/players/?imdb=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
 } else {
-  kp_id = id;
+  const url = 'https://kinobox.tv/api/players/?kinopoisk=' + id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
 }
 
-const url = 'https://kinobox.tv/api/players/?kinopoisk=' + kp_id + '&imdb=' + imdb_id + '&sources=Alloha,Collaps,Hdvb,Videocdn,Voidboost,Kodik';
 
 // отправляем запрос с помощью fetch API
 fetch(url)
